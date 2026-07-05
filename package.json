@@ -1,0 +1,16 @@
+{
+  "name": "xizi-worksheet-generator",
+  "version": "1.0.0",
+  "description": "Generates printable Chinese character-writing (tianzige) practice worksheets as PDF.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build-data": "node scripts/build-data.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pdfkit": "^0.15.0",
+    "svg-to-pdfkit": "^0.1.8"
+  }
+}

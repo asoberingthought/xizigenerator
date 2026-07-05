@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Xi Zi (习字) Worksheet Generator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Xi Zi <span class="cjk">习字</span> Worksheet Generator</h1>
+    <p class="subtitle">
+      Type in individual Chinese characters (Simplified only) and download a printable
+      田字格 practice worksheet — each character gets its own page: a reference with
+      pinyin and stroke order, progressive stroke-by-stroke tracing, and blank rows for
+      independent writing.
+    </p>
+
+    <form id="worksheet-form">
+      <label for="text">Characters</label>
+      <textarea
+        id="text"
+        name="text"
+        rows="4"
+        placeholder="e.g. 学校你好 (spaces/line breaks are optional and ignored)"
+      ></textarea>
+
+      <div class="row">
+        <label class="inline">
+          Maximum characters per worksheet
+          <input type="number" id="maxCharacters" min="1" max="50" value="10" />
+        </label>
+
+        <label class="inline">
+          Rows per character (optional)
+          <input type="number" id="rowsPerCharacter" min="1" max="40" placeholder="default 5" />
+        </label>
+      </div>
+
+      <div id="feedback" class="feedback" hidden></div>
+
+      <button type="submit" id="submit-btn">Generate PDF worksheet</button>
+    </form>
+
+    <footer>
+      <p>
+        Stroke data from <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noopener">Make Me a Hanzi</a>
+        (Arphic Public License). Handwriting font:
+        <a href="https://github.com/lxgw/LxgwWenkaiGB" target="_blank" rel="noopener">LXGW WenKai GB</a> (SIL OFL 1.1).
+        Print-only — no on-screen tracing, no accounts, nothing is saved.
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
